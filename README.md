@@ -13,7 +13,7 @@ Stetho est un outil simple conçu pour vérifier périodiquement l'état (actif 
 
 ## Pour lancer :
 
-Téléchargez le fichier zip, décompressez-le, puis exécutez le fichier `.bat` si vous êtes sous Windows, ou `.sh` sinon.
+Téléchargez le fichier [zip](https://github.com/andriantomanga/stetho/raw/main/releases/stetho.zip), décompressez-le, puis exécutez le fichier `.bat` si vous êtes sous Windows, ou `.sh` sinon.
 
 ![Lancement de Stetho](screenshots/run.png)
 

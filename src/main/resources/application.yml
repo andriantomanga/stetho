@@ -18,6 +18,7 @@ stetho:
       url: "https://badland"
     - name: "Linkedin"
       url: "https://www.linkedin.com/"
+
   check-interval: 5000
 
 server:
