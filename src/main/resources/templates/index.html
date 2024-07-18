@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Health Check</title>
+    <title>Stetho</title>
     <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script th:inline="javascript">
         /*<![CDATA[*/
@@ -18,7 +21,9 @@
     </script>
 </head>
 <body>
-    <h1>Stetho</h1>
-    <div id="urlCheckList" th:replace="fragments/urlCheckList :: urlCheckList"></div>
+    <div class="container my-4">
+        <h1 class="mb-4">Stetho</h1>
+        <div id="urlCheckList" th:replace="fragments/urlCheckList :: urlCheckList"></div>
+    </div>
 </body>
 </html>

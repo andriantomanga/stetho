@@ -1,18 +1,45 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+th {
+    background-color: black;
+    color: white;
+}
 th, td {
-    padding: 8px;
+    padding: 5px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.status-healthy {
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.status-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    color: red;
+}
+
+.green {
     color: green;
 }
 
-.status-unhealthy {
-    color: red;
+a {
+    text-decoration: none;
+    color: #1C2833;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #34495E;
 }

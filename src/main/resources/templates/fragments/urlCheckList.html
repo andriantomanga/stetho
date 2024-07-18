@@ -1,22 +1,22 @@
 <!-- fragments/urlCheckList.html -->
 
-<div th:fragment="urlCheckList" id="urlCheckList">
-    <table>
-        <thead>
+<div th:fragment="urlCheckList" id="urlCheckList" class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
         <tr>
-            <th>Name</th>
-            <th>URL</th>
-            <th>Status</th>
-            <th>Last Checked</th>
+            <th scope="col">Name <i class="fa-regular fa-address-card"></i></th>
+            <th scope="col">Status <i class="fa-regular fa-font-awesome"></i></th>
+            <th scope="col">Last Checked <i class="fa-solid fa-clock"></i></th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="urlCheck : ${urlChecks}">
-            <td th:text="${urlCheck.name}">Name</td>
             <td>
-                <a th:href="${urlCheck.url}" target="_blank" th:text="${urlCheck.url}">URL</a>
+                <a th:href="${urlCheck.url}" target="_blank" th:text="${urlCheck.name}">Name</a>
             </td>
-            <td th:text="${urlCheck.status ? 'Healthy' : 'Unhealthy'}" th:class="${urlCheck.status ? 'status-healthy' : 'status-unhealthy'}">Status</td>
+            <td>
+                <i th:classappend="${urlCheck.status ? 'fas fa-check-circle text-success green' : 'fas fa-times-circle text-danger red'}"></i>
+            </td>
             <td th:text="${urlCheck.lastCheckedFormatted}">Last Checked</td>
         </tr>
         </tbody>

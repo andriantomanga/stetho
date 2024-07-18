@@ -14,4 +14,11 @@ stetho:
       url: "https://www.google.com"
     - name: "GitHub"
       url: "https://www.github.com"
+    - name: "Badland"
+      url: "https://badland"
+    - name: "Linkedin"
+      url: "https://www.linkedin.com/"
   check-interval: 5000
+
+server:
+  port: 8282
