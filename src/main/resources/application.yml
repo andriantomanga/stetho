@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: stetho
+
+  thymeleaf:
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+
+stetho:
+  urls:
+    - name: "Google"
+      url: "https://www.google.com"
+    - name: "GitHub"
+      url: "https://www.github.com"
+  check-interval: 5000

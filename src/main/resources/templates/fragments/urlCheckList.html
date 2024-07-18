@@ -1,0 +1,24 @@
+<!-- fragments/urlCheckList.html -->
+
+<div th:fragment="urlCheckList" id="urlCheckList">
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Status</th>
+            <th>Last Checked</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="urlCheck : ${urlChecks}">
+            <td th:text="${urlCheck.name}">Name</td>
+            <td>
+                <a th:href="${urlCheck.url}" target="_blank" th:text="${urlCheck.url}">URL</a>
+            </td>
+            <td th:text="${urlCheck.status ? 'Healthy' : 'Unhealthy'}" th:class="${urlCheck.status ? 'status-healthy' : 'status-unhealthy'}">Status</td>
+            <td th:text="${urlCheck.lastCheckedFormatted}">Last Checked</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

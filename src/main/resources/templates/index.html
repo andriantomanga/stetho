@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Health Check</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(document).ready(function() {
+            setInterval(function() {
+                $.get("/refresh", function(data) {
+                console.log("hello");
+                    $("#urlCheckList").replaceWith(data);
+                });
+            }, [[${@stethoProperties.getCheckInterval()}]]);
+        });
+        /*]]>*/
+    </script>
+</head>
+<body>
+    <h1>Stetho</h1>
+    <div id="urlCheckList" th:replace="fragments/urlCheckList :: urlCheckList"></div>
+</body>
+</html>
