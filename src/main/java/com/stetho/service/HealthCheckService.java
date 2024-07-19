@@ -29,6 +29,7 @@ import jakarta.annotation.PostConstruct;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -51,18 +52,18 @@ public class HealthCheckService {
 
     @Scheduled(fixedRateString = "#{stethoProperties.checkInterval}")
     public void checkUrls() {
-        stethoProperties
-                .getUrls()
-                .forEach(this::updateUrlStatusAndLastChecked);
+        stethoProperties.getUrls().forEach(this::updateUrlStatusAndLastChecked);
     }
 
+    @Async("taskExecutor")
     private void updateUrlStatusAndLastChecked(UrlCheck urlCheck) {
         var url = urlCheck.getUrl();
         var status = false;
         try {
             status = urlChecker.checkUrl(new URL(url));
         } catch (MalformedURLException e) {
-            throw new RuntimeException("Malformed URL: " + url, e);
+            log.error("Malformed URL: {}", url, e);
+            return;
         }
         urlCheck.setStatus(status);
         urlCheck.setLastChecked(LocalDateTime.now());
