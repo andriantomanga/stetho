@@ -1,4 +1,5 @@
 # Stetho
+![Build Status](https://github.com/andriantomanga/stetho/actions/workflows/main.yml/badge.svg)
 
 Stetho est un outil simple conçu pour vérifier périodiquement l'état (actif ou inactif) d'une liste d'URL. Il offre un moyen direct de surveiller la disponibilité des ressources web et d'afficher leurs statuts en temps réel via une interface web conviviale.
 
