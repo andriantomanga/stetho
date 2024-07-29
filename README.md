@@ -1,5 +1,6 @@
 # Stetho
 ![Build Status](https://github.com/andriantomanga/stetho/actions/workflows/main.yml/badge.svg)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Stetho est un outil simple conçu pour vérifier périodiquement l'état (actif ou inactif) d'une liste d'URL. Il offre un moyen direct de surveiller la disponibilité des ressources web et d'afficher leurs statuts en temps réel via une interface web conviviale.
 
@@ -18,6 +19,5 @@ Téléchargez le fichier [zip](https://github.com/andriantomanga/stetho/raw/main
 
 ![Lancement de Stetho](screenshots/run.png)
 
-## Licence 
-
-MIT
+## ... Want to support ? 
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_My_Work-yellow.svg)](https://www.buymeacoffee.com/andriantomanga)
