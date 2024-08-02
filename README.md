@@ -1,4 +1,5 @@
-# Stetho
+![Stetho Image](./stetho.png)
+
 ![Build Status](https://github.com/andriantomanga/stetho/actions/workflows/main.yml/badge.svg)
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
